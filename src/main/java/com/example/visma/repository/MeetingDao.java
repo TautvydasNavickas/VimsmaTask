@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class MeetingDao {
 
-    private static final Meetings list = new Meetings();
+    private static Meetings list = new Meetings();
 
     static
     {

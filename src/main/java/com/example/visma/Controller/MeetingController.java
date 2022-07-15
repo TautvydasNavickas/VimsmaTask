@@ -40,9 +40,9 @@ public class MeetingController {
         return ResponseEntity.created(location).build();
     }
     @PostMapping(path= "/", consumes = "application/json")
-    public Meeting delete(@RequestBody Meeting meeting, int index)
+    public Meeting delete(@RequestBody Meeting meeting, int indexformeeting)
     {
-        return meetingDao.deleteById(index);
+        return meetingDao.deleteById(indexformeeting);
     }
 
 }
