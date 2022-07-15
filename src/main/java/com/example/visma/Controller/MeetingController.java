@@ -39,4 +39,10 @@ public class MeetingController {
 
         return ResponseEntity.created(location).build();
     }
+    @PostMapping(path= "/", consumes = "application/json")
+    public Meeting delete(@RequestBody Meeting meeting, int index)
+    {
+        return meetingDao.deleteById(index);
+    }
+
 }

@@ -11,7 +11,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class MeetingDao {
 
-    private static Meetings list = new Meetings();
+    private static final Meetings list = new Meetings();
 
     static
     {
@@ -30,5 +30,12 @@ public class MeetingDao {
         list.getMetingList().add(meeting);
     }
 
+
+    public Meeting deleteById (int index) {
+        return list.getMetingList().remove(index);
+//        if (meeting.getResponsiblePerson() == ResponsiblePerson)
+//        list.getMetingList().remove(meeting);
+
+    }
 }
 
